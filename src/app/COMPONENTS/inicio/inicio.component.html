@@ -1,0 +1,415 @@
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: fixed  ;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 165px;
+    display: flex;
+    align-items: center;
+  
+    background-color:#406683;
+    color: white;
+    font-weight: 600;
+    
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+    top:8px;
+    position:fixed;
+  }
+  
+  #img1  {
+    margin: 0 16px;
+    top:8px;
+    position:fixed;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  .toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover,
+  .toolbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
+
+  .content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+    
+  }
+
+  .card svg.material-icons path {
+    fill: #888;
+    
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+    
+   
+  }
+
+  .card {
+    all: unset;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #CAEDFE;
+    height: 10px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    
+    justify-content: center;
+    top:121px;
+    position: fixed;
+    transition: all 0.3s ease-in-out;
+    line-height: 24px;
+    
+  }
+  .card-2 {
+    all: unset;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #CAEDFE;
+    height: 15px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    left: 300px;
+    justify-content: center;
+    top:117px;
+    position: fixed;
+    transition: all 0.3s ease-in-out;
+    line-height: 24px;
+  }
+
+  .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .card.card-small {
+    height: 16px;
+    width: 168px;
+    
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+
+  .card.highlight-card {
+    background-color: #87d2d4;
+    color: white;
+    font-weight: 450;
+    border-radius: 50px, 25px, 0px, 0px;
+    position: fixed;
+    height: 10px;
+    width: 250px;
+    top:170px;
+  }
+
+  
+
+  svg#rocket {
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    top: -24px;
+  }
+
+  svg#rocket-smoke {
+    height: calc(100vh - 95px);
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    z-index: -10;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+  
+
+  
+
+  
+
+  .circle-link:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+
+  .github-star-badge {
+    color: #24292e;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(27,31,35,.2);
+    border-radius: 3px;
+    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+    margin-left: 4px;
+    font-weight: 600;
+  }
+
+  .github-star-badge:hover {
+    background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
+    border-color: rgba(27,31,35,.35);
+    background-position: -.5em;
+  }
+
+  .github-star-badge .material-icons {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+
+  svg#clouds {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }
+</style>
+
+<!-- Toolbar/se puede quitar el top --logos-->
+<div class="toolbar" role="banner">
+  <img
+    width="170"
+    height="100"
+   
+    top="50"
+    alt="ESFOT Logo"
+    src="https://esfot.epn.edu.ec/images/headers/logo_esfot_buho.png" />
+    <img
+    style="right: -18px; width:200px; height:100px; top:10px;"
+    alt="EPN Logo"
+    src="https://esfot.epn.edu.ec/images/headers/logo_epn.svg" />
+    
+    
+    
+</div>
+
+<div class="content" role="main">
+
+  <!-- Highlight Card -->
+  <div class="card highlight-card ">
+    <span>💻🖥 BIENVENIDOS 💻🖥💽      </span>
+
+  </div>
+
+  <!-- Sistema titulo-->
+  <h2 style="position: fixed; color:white; top:45px;">  Sistema de Gestión y Administración de los laboratorios TICs</h2>
+  
+
+  <div class="card-container">
+    <a class="card"  routerLink="inicio" style="left: -01px;">
+      
+      <span>Inicio</span>
+      </a>
+
+    <a class="card" routerLink="laboratorios-tics"  style="left: 250px;">
+      
+      <span>Laboratorios de TICs</span>
+      
+    </a>
+
+    <a class="card" target="" rel=""  routerLink="login" style="left:1100px;">
+      
+      <span>Iniciar Sesion/Registrarse</span>
+      
+    </a>
+
+   
+
+  </div>
+</div>
+
+  
+
+
+
+
+
+<body>
+  <div class="col-md-12">
+    <div class="card card-container">
+<style>
+    .card.highlight-card {
+      background-color: #87d2d4;
+      color: white;
+      font-weight: 450;
+      border-radius: 5px;;
+      position: fixed;
+      height: 30px;
+      width: 250px;
+      top:770px;
+    }
+    *{
+      padding:0px;
+      margin:0px;
+      }
+      #header{
+      margin:auto;
+      width:2000px;
+      height:4000px;
+      }
+      ul, ol {
+      list-style:none;
+      }
+      .nav li a {
+      background-color:#F4F9F9;
+      color:#fff;
+      text-decoration:none;
+      padding:10px 15px;
+      display:block;
+      
+      
+      }
+  </style>
+  
+  <body>
+    <div id="header">
+  <h2 style="left:385px;top:225px; position:fixed; color:#2a3c4b " >Aquí podrás encontrar los mejores laboratorios a tu disposición</h2>
+
+  <img
+      style="right:975px;border-radius:25px; width:360px; height:245px; top:310px; position:fixed;"
+      alt=""
+      src="../assets/img/ESFOT.jpeg" />
+      <img
+      style="left:380px; border-radius:25px; width:360px; height:245px; top:310px; position:fixed;"
+      alt=""
+      src="../assets/img/La1.jpeg" />
+      
+      <div class="card highlight-card ">
+        <span >💻🖥 BIENVENIDOS 💻🖥💽      </span>
+  
+      </div>
+    </div>
+    </body>
+            
+  
+     
+      
+      
+  
